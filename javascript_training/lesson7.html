@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Изучение JavaScript, основы</title>
+</head>
+<body>
+
+<div>
+<script type="text/javascript">
+    /**
+     Домашнее задание к 53-му уроку.
+
+     Выясните с какого браузера человек зашел на вашу страничку и, в зависимости от браузера,
+     выведите на экран информацию.
+
+     Если firefox: "Ваш браузер Firefox."
+     Если opera: "Ваш браузер Opera."
+     Если chrome: "Ваш браузер Chrome."
+     Если ie: "Ваш браузер Internet Explorer."
+     */
+
+    // Решение:
+    var str = navigator.userAgent;
+    var regV = /[F|f]irefox/;
+    var regV1 = /Chrome/;
+    var regV2 = /OPR/;
+    var regV3 = /MSIE/;
+    var result = str.match(regV);
+    var result1 = str.match(regV1);
+    var result2 = str.match(regV2);
+    var result3 = str.match(regV3);
+
+    if(result == "Firefox"){
+        document.write("Ваш браузер Firefox<br>");
+    }
+    else if(result2 == "OPR"){
+        document.write("Ваш браузер Opera<br>");
+    }
+    else if(result1 == "Chrome"){
+        document.write("Ваш браузер Chrome<br>");
+    }
+    else if(result3 == "MSIE"){
+        document.write("Ваш браузер Internet Explorer<br>");
+    }
+
+</script>
+</div>
+
+</body>
+</html>

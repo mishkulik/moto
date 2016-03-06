@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Изучение JavaScript, основы</title>
+</head>
+<body>
+
+<div>
+<script type="text/javascript">
+    /**
+     Домашнее задание к 34-му уроку.
+
+     Написать функцию, которая получает в качестве параметра переменную
+     содержащую строку и с помощью регулярного выражения проверяет,
+     начинается ли содержимое этой переменной с цифры или нет.
+
+     Результат своей работы функция выводит на экран.
+
+     Переменная для передачи в функцию: var forTesting = "8 пингвинов и 9 карасей.";
+     */
+
+    // Решение:
+    var forTesting = "9 пингвинов и 9 карасей.";
+
+    function testForNumber(string){
+        var regV = /^\d/;
+        var result = string.search(regV);
+        if(!result){
+            document.write("Данная строка начинается с цифры: "+string.charAt(0));
+        }
+        else{
+            document.write("Данная строка начинается не с цифры.");
+        }
+    }
+    testForNumber(forTesting);
+</script>
+</div>
+
+</body>
+</html>

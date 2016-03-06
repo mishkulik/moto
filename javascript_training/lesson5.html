@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Изучение JavaScript, основы</title>
+</head>
+<body>
+
+<div>
+<script type="text/javascript">
+    /**
+     Напишите функцию, которая получает в качестве параметра массив и перебирает
+     его на предмет преобразования строк, начинающихся с числа в обычные числа.
+     В результате работы функции, массив должен изменить свои значения на полностью числовые.
+
+     Массив для задания:
+     var myArray = ["100 попугаев", "201 рубль", "624 доллара", "109 кроликов", "33 весельчака", "62 кабана"];
+     */
+
+    // Решение:
+    var myArray = ["100 попугаев", "201 рубль", "624 доллара", "109 кроликов", "33 весельчака", "62 кабана"];
+    document.write('Исходный массив: ' + myArray+"<br>");
+    function arrayChange(array){
+        for(var i = 0; i < array.length; i++){
+            var value = parseInt(array[i]);
+            myArray.splice(i, 1, value);
+            // для последней строки либо так myArray[i] = value;
+        }
+    }
+    arrayChange(myArray);
+    document.write('Итог работы функции: ' + myArray);
+
+</script>
+</div>
+
+</body>
+</html>
